@@ -1,0 +1,149 @@
+{
+  "inputs": {
+    "__type": "tool_call_with_context",
+    "state": {
+      "messages": [
+        {
+          "additional_kwargs": {},
+          "content": "What is 54 + 2 * 3?",
+          "id": "6dde938b-a0d3-4702-a278-97ff16196111",
+          "response_metadata": {},
+          "type": "human"
+        },
+        {
+          "additional_kwargs": {
+            "refusal": null
+          },
+          "content": "",
+          "id": "lc_run--019e6b69-ea81-74e3-9e11-08299d5034d5-0",
+          "invalid_tool_calls": [],
+          "response_metadata": {
+            "finish_reason": "tool_calls",
+            "id": "chatcmpl-DkGPtrgnqTv9KgeQ56mcVEvsD5DHa",
+            "logprobs": null,
+            "model_name": "gpt-3.5-turbo-0125",
+            "model_provider": "openai",
+            "service_tier": "default",
+            "system_fingerprint": null,
+            "token_usage": {
+              "completion_tokens": 49,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": 0,
+                "audio_tokens": 0,
+                "reasoning_tokens": 0,
+                "rejected_prediction_tokens": 0
+              },
+              "prompt_tokens": 78,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cached_tokens": 0
+              },
+              "total_tokens": 127
+            }
+          },
+          "tool_calls": [
+            {
+              "args": {
+                "a": 54,
+                "b": 0
+              },
+              "id": "call_aD6h2qA55A3PxvJiOSQAJ5Q4",
+              "name": "add",
+              "type": "tool_call"
+            },
+            {
+              "args": {
+                "a": 2,
+                "b": 3
+              },
+              "id": "call_1SNswlNLXMIKHBbo3jQIedUH",
+              "name": "multiply",
+              "type": "tool_call"
+            }
+          ],
+          "type": "ai",
+          "usage_metadata": {
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "input_tokens": 78,
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            },
+            "output_tokens": 49,
+            "total_tokens": 127
+          }
+        }
+      ],
+      "remaining_steps": 10006
+    },
+    "tool_call": {
+      "args": {
+        "a": 54,
+        "b": 0
+      },
+      "id": "call_aD6h2qA55A3PxvJiOSQAJ5Q4",
+      "name": "add",
+      "type": "tool_call"
+    }
+  },
+  "outputs": {
+    "messages": [
+      {
+        "additional_kwargs": {},
+        "artifact": {
+          "structured_content": {
+            "result": 54
+          }
+        },
+        "content": [
+          {
+            "id": "lc_e20519a1-94d7-4b1f-a73e-fc3e1f2acdcb",
+            "text": "54",
+            "type": "text"
+          }
+        ],
+        "name": "add",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_aD6h2qA55A3PxvJiOSQAJ5Q4",
+        "type": "tool"
+      }
+    ]
+  },
+  "metadata": {
+    "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGSMITH_PROJECT": "mcp-test",
+    "LANGSMITH_TRACING": "true",
+    "langgraph_checkpoint_ns": "tools:7b1d61af-9441-924c-2402-fe2dd163cff1",
+    "langgraph_node": "tools",
+    "langgraph_path": [
+      "__pregel_push",
+      0,
+      false
+    ],
+    "langgraph_step": 2,
+    "langgraph_triggers": [
+      "__pregel_push"
+    ],
+    "ls_integration": "langgraph",
+    "ls_run_depth": 1,
+    "revision_id": "2ddaa17-dirty"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "66cfc4d6-b28d-4699-96a4-1f669aba8567"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "2cf79cd4-2f7a-4889-8ae2-c902a2fbe8cc"
+    },
+    "tracing_project": {
+      "id": "01e20e5c-a9e4-45a2-8d9a-690008de18a5",
+      "name": "mcp-test"
+    }
+  }
+}
